@@ -1,6 +1,8 @@
+//return the lowest index at which to insert the num argument into the sorted array (first argument)
 function where(arr, num) {
-    var high = "";
-    var low = "";
+    var high = 0;
+    var low = 0;
+    var insertionPoint = "0";
     var i = 0;
     while(i < arr.length) {
         if(arr[i] < num) {
@@ -11,13 +13,23 @@ function where(arr, num) {
             high = arr[i];
             break;
         }
+        else if (arr[i] === num) {
+            insertionPoint = i;
+            return insertionPoint;
+        }
+        else {
+            i++;
+        }
     }
     console.log(arr.indexOf(high));
     console.log(arr.indexOf(low));
     if((arr.indexOf(high)-arr.indexOf(low)) === 1) {
-        var insertionPoint = arr.indexOf(low)+1;
-        arr.splice(insertionPoint, 0, num);
+        insertionPoint = arr.indexOf(low)+1;
     }
-    return arr;
+    else if (high === 0){
+        insertionPoint = 0;
+    }
+    return insertionPoint;
 }
-where([10,30,40,50,51,52,56,60], 55);
+
+where([1,2,3], 2);
