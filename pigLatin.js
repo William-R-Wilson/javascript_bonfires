@@ -1,7 +1,7 @@
 function translate(str) {
   var wordLength = str.length - 1; 
   var vowels = ["a","e","i","o","u"];
-  var dipthongs = ["gl"];
+  var dipthongs = ["gl", "bl"];
   for (var i = 0; i < vowels.length; i++) {
       if (str.charAt(0) === vowels[i]) { 
     return str + "way";
@@ -19,7 +19,7 @@ function translate(str) {
     return translated+str.charAt(0)+"ay";
   
 }
-
+translate("Rug");
 translate("glove");
-
+translate("apple");
 
