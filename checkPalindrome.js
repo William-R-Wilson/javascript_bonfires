@@ -25,3 +25,6 @@ function palindrome(str) {
 }
 
 palindrome("Race, Car");
+
+// see alternate solutions here:  http://pastebin.com/JgLmmZhi
+// and here:  https://stackoverflow.com/questions/30178172/check-for-palindrome-ignore-special-characters-whitespace-and-capitalization/30178339#30178339
