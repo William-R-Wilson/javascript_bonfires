@@ -28,4 +28,4 @@ function convert(num) {
   return result;
 }
 
-convert(59);
+console.log(convert(99));
